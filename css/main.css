@@ -1,0 +1,55 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.wave-text-box{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #15a6e9;
+}
+.wave-text-box h2{
+    position: absolute;
+    font-size: 10vw;
+    text-transform: uppercase;
+}
+.wave-text-box h2:nth-child(1){
+    color: #ffffff;
+    text-shadow: -2px 2px 0px #15a6e9,
+    -4px 4px 0px #15a6e9,
+    -6px 6px 0 #15a6e9,
+    -8px 8px 0 #15a6e9,
+    -18px 18px 20px rgba(0, 0, 0, 0.5),
+    -18px 18px 50px rgba(0, 0, 0, 0.5);
+}
+.wave-text-box h2:nth-child(2){
+    color: #2196f3;
+    opacity: 0.5;
+    animation: Waves 3s ease-in-out infinite;
+}
+.wave-text-box h2:nth-child(3){
+    color: #2196f3;
+    opacity: 0.4;
+    animation: Waves 6s ease-in-out infinite;
+}
+.wave-text-box h2:nth-child(4){
+    color: #2196f3;
+    animation: Waves 4s ease-in-out infinite;
+}
+@keyframes Waves {
+    0%,100%{
+        clip-path: polygon(0% 46%, 16% 45%, 34% 52%, 50% 61%, 68% 65%, 85% 61%, 100% 53%, 100% 100%, 0% 100%);
+    }
+    50%{
+        clip-path: polygon(0% 66%, 14% 73%, 34% 76%, 50% 71%, 64% 62%, 79% 55%, 100% 51%, 100% 100%, 0% 100%);
+    }
+}
